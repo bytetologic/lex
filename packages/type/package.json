@@ -4,7 +4,15 @@
   "description": "TypeScript-first schema validation with seamless static type inference. Define your data contract once and safely validate its structure at run-time, from the browser to the server.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
+  "sideEffects": false,
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts --minify",
     "test": "jest",

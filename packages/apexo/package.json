@@ -4,7 +4,15 @@
     "description": "The umbrella package for ApexJS utilities.",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
+    "sideEffects": false,
     "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
     "scripts": {
         "build": "tsup src/index.ts --format cjs,esm --dts --minify",
         "test": "jest",

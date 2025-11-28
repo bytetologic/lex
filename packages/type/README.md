@@ -5,13 +5,13 @@ TypeScript-first schema validation with seamless static type inference. The data
 ## Installation
 
 ```bash
-npm install @bytetologic/lex
+npm install @apexo/lex
 ```
 
 ## Usage
 
 ```typescript
-import { isString, isNumber, isEmpty } from '@bytetologic/lex';
+import { isString, isNumber, isEmpty } from '@apexo/lex';
 
 isString('hello'); // true
 isNumber(123); // true
