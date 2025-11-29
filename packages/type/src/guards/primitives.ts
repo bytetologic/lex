@@ -3,7 +3,11 @@ export const isString = (value: unknown): value is string => {
 };
 
 export const isNumber = (value: unknown): value is number => {
-    return typeof value === 'number' && !isNaN(value);
+    return typeof value === 'number' && !isNaN(Number(value));
+};
+
+export const isNumberStr = (value: unknown): value is number => {
+    return !isNaN(Number(value));
 };
 
 export const isBoolean = (value: unknown): value is boolean => {
@@ -11,16 +15,15 @@ export const isBoolean = (value: unknown): value is boolean => {
 };
 
 export const isNil = (value: unknown): value is null | undefined => {
-    return value === null || value === undefined;
+    return isNull(value) || isUndefined(value);
 };
-
 
 export const isBigInt = (value: unknown): value is bigint => {
     return typeof value === "bigint";
 };
 
 export const isUndefined = (value: unknown): value is undefined => {
-    return value === undefined;
+    return typeof value === "undefined";
 };
 
 export const isNull = (value: unknown): value is null => {

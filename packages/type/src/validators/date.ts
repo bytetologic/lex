@@ -1,4 +1,11 @@
-import type { TimeOffset } from "./date-time.interface";
+export interface TimeOffset {
+    days?: number;
+    hours?: number;
+    minutes?: number;
+    seconds?: number;
+    milliseconds?: number;
+}
+
 
 // Time multipliers
 const MS_PER_SECOND = 1000;
@@ -108,13 +115,6 @@ export const isDateTimeString = (value: unknown): value is string => {
         /^\d{4}-\d{2}-\d{2}[ T]\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})?$/;
     return regex.test(value);
 };
-
-
-
-
-
-
-
 
 
 // ------------------------------------------------------

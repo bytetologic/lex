@@ -1,5 +1,5 @@
-import { isNil, isString } from "./basic";
-import { isArray, isObject } from "./object";
+import { isNil, isString } from "./primitives";
+import { isArray, isObject } from "./objects";
 
 
 export const isEmptyStr = (value: unknown): boolean => {
